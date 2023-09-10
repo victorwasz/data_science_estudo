@@ -3,9 +3,8 @@ library(igraph)
 library(ggmap)
 
 rm(list=ls())
-setwd("C:/Users/Victor/Desktop/UTFPR/Metodos_analiticos_para_redes_sociais")
 
-zachary_graph <- read.graph('zachary/zachary.txt', 'ncol', directed = FALSE)
+zachary_graph <- read.graph('zachary.txt', 'ncol', directed = FALSE)
 
 com <- cluster_walktrap(zachary_graph)
 

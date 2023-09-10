@@ -3,9 +3,8 @@ library(igraph)
 library(ggmap)
 
 rm(list=ls())
-setwd("C:/Users/Victor/Desktop/UTFPR/Metodos_analiticos_para_redes_sociais")
 
-power <- read.graph('power/power.gml', format = "gml")
+power <- read.graph('power.gml', format = "gml")
 
 coordenadas <- layout_with_drl(power)
 plot(power,vertex.label = NA,vertex.size=1.5,layout=coordenadas)

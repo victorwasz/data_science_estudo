@@ -3,10 +3,9 @@ library(igraph)
 library(ggmap)
 
 rm(list=ls())
-setwd("C:/Users/Victor/Desktop/UTFPR/Metodos_analiticos_para_redes_sociais")
 
-e_coli <- read_graph('e_coli/e_coli.net', 'ncol',directed=TRUE)
-e_coli_nodes <- read.table('e_coli/e_coli_nodes.txt')
+e_coli <- read_graph('e_coli.net', 'ncol',directed=TRUE)
+e_coli_nodes <- read.table('e_coli_nodes.txt')
 
 f <- function(x) e_coli_nodes$V2[match(x, e_coli_nodes$V1)]
 res <- sapply(V(e_coli), f)

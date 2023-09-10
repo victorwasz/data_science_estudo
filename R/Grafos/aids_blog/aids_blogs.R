@@ -3,9 +3,8 @@ library(igraph)
 library(ggmap)
 
 rm(list=ls())
-setwd("C:/Users/Victor/Desktop/UTFPR/Metodos_analiticos_para_redes_sociais")
 
-blog_graph <- read_graph('aids_blog/AIDSBlog.txt', 'ncol', directed=TRUE)
+blog_graph <- read_graph('AIDSBlog.txt', 'ncol', directed=TRUE)
 
 coordenadas <- layout_with_fr(blog_graph)
 plot(blog_graph,vertex.size=6, layout=layout_with_fr,edge.arrow.size = 0.3 )
